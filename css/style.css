@@ -114,7 +114,7 @@ p {
 }
 .kasargodbanner {
   height: 800px;
-  background: url("../images/District/kasargod/1552979160_bekal_fort.jpg.jpg") top center/cover no-repeat;
+  background: url("../images/District/kasargod/1552979160_bekal_fort.jpg.jpg") top center/cover no-repeat ;
 }
 span.dot {
   background: #fee50e;
@@ -123,6 +123,9 @@ span.dot {
   border-radius: 50%;
   display: inline-block;
   margin-bottom: 0.1rem;
+}
+.card-img-top{
+    height: 300px;
 }
 
 footer {

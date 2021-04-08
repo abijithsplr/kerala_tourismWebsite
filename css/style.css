@@ -1,0 +1,162 @@
+html,
+body {
+  min-height: 100%;
+}
+
+body.district {
+  background: #f2f2ff;
+}
+
+@media only screen and (max-width: 991.9px) {
+  .navbar.fixed-top {
+    /* position: relative; */
+    background: #fff;
+  }
+  .banner {
+    margin-top: 86px;
+  }
+}
+
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.m-l-auto {
+  margin-left: auto;
+}
+h4 {
+  font-family: "Lucida Sans", "LuPcida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+    sans-serif;
+}
+.overlayBg {
+  margin: 5% auto 0;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.87);
+  padding: 2em;
+  color: black;
+}
+#sign {
+  text-decoration: none;
+}
+.content {
+  padding: 2em;
+  text-align: justify;
+  margin: auto;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  background-color: rgba(193, 231, 142, 0.575);
+}
+.cardcontainer {
+  margin: 5%;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.mybody {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.trivandrumbanner {
+  height: 600px;
+  background: url("../images/District/Thiruvananthapuram.jpg") top center/cover no-repeat;
+}
+.kollambanner {
+  height: 600px;
+  background: url("../images/District/kollam/kollam.jpg") top center/cover no-repeat;
+}
+.pathanamthittabanner {
+  height: 600px;
+  background: url("../images/District/Pathanamthitta/GaviKerala.jpg") top center/cover no-repeat;
+}
+.alapuzhabanner {
+  height: 600px;
+  background: url("../images/District/alapuzha/7221844019.jpg") top center/cover no-repeat;
+}
+.kottayambanner {
+  height: 600px;
+  background: url("../images/District/kottayam/ecbb8010-bb91-468e-8aa4-d6ad52b0bdd3.jpg") top center/cover no-repeat;
+}
+.idukkibanner {
+  height: 600px;
+  background: url("../images/District/idukki.jpg") top center/cover no-repeat;
+}
+.ernakulambanner {
+  height: 600px;
+  background: url("../images/District/ernakulam/unnamed.jpg") top center/cover no-repeat;
+}
+.thrissurbanner {
+  height: 800px;
+  background: url("../images/District/thrissur/thrissurb.jpg") top center/cover no-repeat;
+}
+.palakadbanner {
+  height: 700px;
+  background: url("../images/District/palakkad-fort-tipus-fort-palakkad-kerala.jpg") top center/cover no-repeat;
+}
+.malappurambanner {
+  height: 700px;
+  background: url("../images/District/malappuram.jpg") top center/cover no-repeat;
+}
+.kozhikodebanner {
+  height: 700px;
+  background: url("../images/District/kozhikode.jpg") top center/cover no-repeat;
+}
+.wayanadbanner {
+  height: 800px;
+  background: url("../images/District/Wayanad.jpg") top center/cover no-repeat;
+}
+.kannurbanner {
+  height: 800px;
+  background: url("../images/District/kannur.jpg") top center/cover no-repeat;
+}
+.kasargodbanner {
+  height: 800px;
+  background: url("../images/District/kasargod/1552979160_bekal_fort.jpg.jpg") top center/cover no-repeat;
+}
+span.dot {
+  background: #fee50e;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 0.1rem;
+}
+
+footer {
+  background-color: #2b2b2b;
+  display: flex;
+  text-align: center;
+  color: #fff;
+  padding: 0.5em 0.5em 0.5em;
+}
+.iconlink a {
+  color: white;
+}
+.nav-link {
+  text-shadow: 0 0 1px rgba(255, 255, 255, 1);
+}
+.navbar-states {
+  background: #09f;
+}
+.navbar-states.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  border-radius: 3px;
+}
+.navbar-states.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-states.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-states.navbar-dark .navbar-nav .nav-link:active {
+  background: rgba(255, 255, 255, 0.24);
+}
+.navbar-states.navbar-dark .navbar-nav .nav-link.active {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.detailSection {
+  padding: 50px 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: justify;
+}

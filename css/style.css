@@ -138,6 +138,12 @@ footer {
 .iconlink a {
   color: white;
 }
+.btn-default{
+  background: #fff;
+  border: 1px solid #ced4da;
+  border-left: 0 none transparent;
+}
+
 .nav-link {
   text-shadow: 0 0 1px rgba(255, 255, 255, 1);
 }

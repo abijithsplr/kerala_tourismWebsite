@@ -51,33 +51,55 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-24">
-        <form class="overlayBg">
+        <form class="overlayBg" action="index.html" onsubmit="return check() ">
           <h3>Sign Up</h3>
           <hr>
           <br>
           <div class="mb-3">
             <div class="row ">
               <div class="col">
-                <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                <input type="text" class="form-control" placeholder="First name" aria-label="First name" id=firstName>
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" id=lastName>
               </div>
             </div>
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail2" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
+            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp"
+              onkeyup="validateEmail();">
             <div id="emailHelp" class="form-text">Enter your E-mail id</div>
           </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPhoneNumber" class="form-label">Phone Number</label>
+            <input type="phoneNumber" class="form-control" id="exampleInputPhoneNumber"
+              aria-describedby="phonenumberHelp" placeholder="XXX-XXX-XXXX or XXX.XXX.XXXX or XXX XXX XXXX">
+            <div id="phonenumberHelp" class="form-text">Enter your 10 digit phone number</div>
+          </div>
+
           <div class="mb-3">
             <label for="exampleInputPassword2" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword2" aria-describedby="PasswordHelp">
+            <div class="input-group mb-3">
+              <input type="password" class="form-control" id="exampleInputPassword2" aria-describedby="PasswordHelp"
+                oninput=" return validatePassword();">
+              <button class="btn btn-default" type="button" id="btnPwdToggle"
+                onclick="pwdToggle(this,'exampleInputPassword2')">
+                <ion-icon name="eye-off-outline"></ion-icon>
+              </button>
+            </div>
             <div id="PasswordHelp1" class="form-text"> Must be 8-20 characters long.</div>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword3" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword3" aria-describedby="PasswordHelp">
+            <div class="input-group mb-3">
+              <input type="password" class="form-control" id="exampleInputPassword3" aria-describedby="PasswordHelp">
+              <button class="btn btn-default" type="button" id="btnPwdToggle1"
+                onclick="pwdToggle(this,'exampleInputPassword3')">
+                <ion-icon name="eye-off-outline"></ion-icon>
+              </button>
+            </div>
             <div id="PasswordHelp2" class="form-text"> Re-enter the password</div>
           </div>
           <button type="submit" class="btn btn-primary">Sign Up</button>
@@ -88,7 +110,7 @@
   <br>
   <!-- Signup  end -->
   <!-- footer start -->
-  <footer >
+  <footer>
     <div>
       Kerala Tourism &copy; 2021
     </div>
@@ -110,52 +132,52 @@
   </footer>
   <!-- footer end -->
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <form class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title" id="exampleModalLabel">Login</h4>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <form class="modal-dialog" action="./index.html" onsubmit="return login()">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel">Login</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
 
-          <!-- login start -->
+            <!-- login start -->
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Remember me</label>
+            </div>
 
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <p>Need an account?</p>
+            <a id="sign" href="Signup.html">Sign up</a>
+            <br>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary" >Login</button>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Remember me</label>
-          </div>
-          <p>Need an account?</p>
-          <a id="sign" href="Signup.html">Sign up</a>
-          <br>
-         
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Login</button>
-          </div>
-        </div>
-    </form>
-  </div>
-   <!-- login form end -->
-  
-  <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
-  <!-- jQuery -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
-    integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
-    integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
-    crossorigin="anonymous"></script>
-  <!-- jq end -->
+    </div>
+  </form>
+    <!-- login form end -->
+    <script src="./script.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+      integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+      integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+      crossorigin="anonymous"></script>
+    <!-- jq end -->
 </body>
 
 </html>

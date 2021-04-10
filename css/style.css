@@ -21,7 +21,9 @@ body.district {
 h1 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-
+.screenHgt {
+  min-height: calc(100vh - 146px);
+}
 .m-l-auto {
   margin-left: auto;
 }

@@ -10,8 +10,8 @@ body.district {
 
 @media only screen and (max-width: 991.9px) {
   .navbar.fixed-top {
-    /* position: relative; */
-    background: #fff;
+    background:rgb(206, 238, 206);
+    /* #09f */
   }
   .banner {
     margin-top: 86px;
@@ -151,6 +151,9 @@ footer {
   color: red;
   visibility: hidden;
 }
+#reqWarning{
+  color: red;
+}
 .nav-link {
   text-shadow: 0 0 1px rgba(255, 255, 255, 1);
 }
@@ -162,7 +165,7 @@ footer {
   border-radius: 3px;
 }
 .navbar-states.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-states.navbar-dark .navbar-nav .nav-link:focus,
+/* .navbar-states.navbar-dark .navbar-nav .nav-link:focus, */
 .navbar-states.navbar-dark .navbar-nav .nav-link:active {
   background: rgba(255, 255, 255, 0.24);
 }

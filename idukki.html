@@ -183,7 +183,11 @@
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <div class="input-group mb-3">
+              <input type="password" class="form-control" id="exampleInputPassword1"><button class="btn btn-default"
+                type="button" id="btnPwdToggle1" onclick="pwdToggle(this,'exampleInputPassword1')">
+                <ion-icon name="eye-off-outline"></ion-icon>
+              </button>
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">

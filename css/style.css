@@ -137,11 +137,7 @@ footer {
   text-align: center;
   color: #fff;
   padding: 0.5em 0.5em 0.5em;
-  /* position: fixed;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  z-index: 10; */
+
 }
 .iconlink a {
   color: white;
@@ -151,7 +147,10 @@ footer {
   border: 1px solid #ced4da;
   border-left: 0 none transparent;
 }
-
+#field{
+  color: red;
+  visibility: hidden;
+}
 .nav-link {
   text-shadow: 0 0 1px rgba(255, 255, 255, 1);
 }

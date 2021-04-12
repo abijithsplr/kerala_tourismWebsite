@@ -28,7 +28,7 @@ let eye =document.getElementById ("btnPwdToggle");
 
 function validateEmail() {
   if (regexp.test(email.value)) {
-    erorE.innerHTML = "Valid mail";
+    erorE.innerHTML = "<b>Valid mail<b>";
     erorE.style.color = "green";
     return true;
   }
@@ -38,7 +38,7 @@ function validateEmail() {
     return false;
   }
   else {
-    erorE.innerHTML = "Invalid mail";
+    erorE.innerHTML = "<b> Invalid mail <b>";
     erorE.style.color = "red";
     return false;
   }
@@ -56,7 +56,7 @@ function validatePassword() {
     return false;
   }
   else if (strongPwd.test(pwd.value)) {
-    erorP.innerHTML = "Password strength: Strong";
+    erorP.innerHTML = "<b>Password strength: Strong<b>";
     erorP.style.color = "green";
     pwd.style.border = "2px solid green";
     pwd.style.borderRight="0 none transparent";
@@ -66,7 +66,7 @@ function validatePassword() {
   }
   else if (mediumPwd.test(pwd.value)) {
     
-    erorP.innerHTML = "Password strength: Medium ";
+    erorP.innerHTML = "<b>Password strength: Medium <b>";
     erorP.style.color = "orange";
     pwd.style.border = "2px solid orange";
     pwd.style.borderRight="0 none transparent";
@@ -75,7 +75,7 @@ function validatePassword() {
     return false;
   }
   else if (poorPwd.test(pwd.value)) {
-    erorP.innerHTML = "Password strength: Poor";
+    erorP.innerHTML = "<b>Password strength: Poor<b>";
     erorP.style.color = "red";
     pwd.style.border = "2px solid red";
     pwd.style.borderRight="0 none transparent";
@@ -86,30 +86,40 @@ function validatePassword() {
   else if (pwd.value.trim() == "") {
     return false;
   }
-
 }
 // Phone number validation
 function validatePhoneNumber() {
   if (regPhoneNumber1.test(phoneNumber.value)) {
+    errorPhone.innerHTML="Enter your 10 digit phone number";
+    errorPhone.style.color="#6c757d";
     return true;
   }
   else if (regPhoneNumber2.test(phoneNumber.value)) {
+    errorPhone.innerHTML="Enter your 10 digit phone number";
+    errorPhone.style.color="#6c757d";
     return true;
   }
   else if (regPhoneNumber3.test(phoneNumber.value)) {
+    errorPhone.innerHTML="Enter your 10 digit phone number";
+    errorPhone.style.color="#6c757d";
     return true;
   }
   else{
+    errorPhone.innerHTML="<b>Enter the phone number in correct format<b>";
+    errorPhone.style.color="red";
     return false;
   }
 }
 // Double check password
 function re_enterPassword() {
   if (pwdre.value == pwd.value) {
-
+    erorReenter.innerHTML=" Re-enter the password ";
+    erorReenter.style.color="#6c757d";
     return true;
   }
   else {
+    erorReenter.innerHTML="<b>Invalid Password<b>";
+    erorReenter.style.color="red";
     return false;
   }
 }
@@ -120,6 +130,7 @@ function checkName() {
     return true;
   }
   else if (lastName == "" && firstName == "") {    
+   
     return false;
   }
   else {
@@ -148,6 +159,7 @@ function login() {
 function check() {
   if (validateEmail() == true && validatePhoneNumber() == true && validatePassword()==true && re_enterPassword()==true && checkName()==true) {
     console.log("true");
+    (document.getElementById("field")).style.visibility="hidden";
     erorReenter.innerHTML=" Re-enter the password";
       erorReenter.style.color="#6c757d";
       errorPhone.innerHTML="Enter your 10 digit phone number";
@@ -155,11 +167,7 @@ function check() {
     return true;
   }
   else {
-    if (re_enterPassword()==false){
-      erorReenter.innerHTML="Invalid Password";
-      erorReenter.style.color="red";
-      return false;
-    }
+    (document.getElementById("field")).style.visibility="visible";
     return false;
   }
 }

@@ -109,6 +109,8 @@ function validatePhoneNumber() {
     return true;
   }
   else if (phoneNumber.value.trim() ==""){
+    errorPhone.innerHTML="Enter your 10 digit phone number";
+    errorPhone.style.color="#6c757d";
     (document.getElementById("field")).style.visibility="visible";
     return false;
   }

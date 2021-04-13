@@ -35,6 +35,7 @@ function validateEmail() {
   else if (email.value == "") {
     erorE.innerHTML = "Enter your E-mail id";
     erorE.style.color = "#6c757d";
+    (document.getElementById("field")).style.visibility="visible";
     return false;
   }
   else {
@@ -53,6 +54,8 @@ function validatePassword() {
     pwd.style.border = "1px solid #ced4da";
     (document.getElementById ("btnPwdToggle")).style.border ="1px solid #ced4da";
     eye.style.borderLeft="0 none transparent";
+    (document.getElementById("field")).style.visibility="visible";
+
     return false;
   }
   else if (strongPwd.test(pwd.value)) {
@@ -84,6 +87,7 @@ function validatePassword() {
     return false;
   }
   else if (pwd.value.trim() == "") {
+    (document.getElementById("field")).style.visibility="visible";
     return false;
   }
 }
@@ -104,8 +108,13 @@ function validatePhoneNumber() {
     errorPhone.style.color="#6c757d";
     return true;
   }
+  else if (phoneNumber.value.trim() ==""){
+    (document.getElementById("field")).style.visibility="visible";
+    return false;
+  }
   else{
     errorPhone.innerHTML="<b>Enter the phone number in correct format<b>";
+    (document.getElementById("field")).style.visibility="hidden";
     errorPhone.style.color="red";
     return false;
   }
@@ -117,9 +126,13 @@ function re_enterPassword() {
     erorReenter.style.color="#6c757d";
     return true;
   }
+  else if (pwdre.value.trim()==""){
+    (document.getElementById("field")).style.visibility="visible";
+  }
   else {
     erorReenter.innerHTML="<b>Invalid Password<b>";
     erorReenter.style.color="red";
+    (document.getElementById("field")).style.visibility="hidden";
     return false;
   }
 }
@@ -129,9 +142,13 @@ function checkName() {
     console.log("true");
     return true;
   }
-  else if (lastName == "" && firstName == "") {    
-   
+  else if (lastName.value.trim() == "" ) {    
+    (document.getElementById("field")).style.visibility="visible";
     return false;
+  }
+  else if(firstName.value.trim() == "") {
+    (document.getElementById("field")).style.visibility="visible";
+    return false ;
   }
   else {
     return false;
@@ -155,6 +172,9 @@ function login() {
     return false;
   }
 }
+// function field() {
+//   if ((email.value=="")|)
+// }
 // whole submit validation
 function check() {
   if (validateEmail() == true && validatePhoneNumber() == true && validatePassword()==true && re_enterPassword()==true && checkName()==true) {
@@ -167,7 +187,7 @@ function check() {
     return true;
   }
   else {
-    (document.getElementById("field")).style.visibility="visible";
+    // (document.getElementById("field")).style.visibility="visible";
     return false;
   }
 }
